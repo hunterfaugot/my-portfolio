@@ -1,7 +1,7 @@
 import '../../styles/globals.css';
 import Layout from '../components/layout';
 
-console.log('Layout Component Path:', require.resolve('../components/Layout'));
+console.log('Layout Component Path:', require.resolve('../components/layout'));
 
 function MyApp({ Component, pageProps }) {
   return (
