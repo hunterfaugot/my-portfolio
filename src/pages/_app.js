@@ -1,5 +1,5 @@
 import '../../styles/globals.css';
-import Layout from '../components/layout';  // Use the correct case and path
+import Layout from '../components/Layout';  // Use the correct case and path
 
 function MyApp({ Component, pageProps }) {
   return (
