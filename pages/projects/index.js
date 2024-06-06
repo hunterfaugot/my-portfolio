@@ -31,13 +31,6 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <nav className="mt-8">
-        <ul className="flex space-x-6">
-          <li><Link href="/" className="text-blue-500 hover:underline">Home</Link></li>
-          <li><Link href="/about" className="text-blue-500 hover:underline">About</Link></li>
-          <li><Link href="/contact" className="text-blue-500 hover:underline">Contact</Link></li>
-        </ul>
-      </nav>
     </div>
   );
 }

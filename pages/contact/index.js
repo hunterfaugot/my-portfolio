@@ -71,13 +71,6 @@ export default function Contact() {
         </div>
       </form>
       {successMessage && <p className="mt-4 text-green-500">{successMessage}</p>}
-      <nav className="mt-8">
-        <ul className="flex space-x-6">
-          <li><Link href="/" className="text-blue-500 hover:underline">Home</Link></li>
-          <li><Link href="/about" className="text-blue-500 hover:underline">About</Link></li>
-          <li><Link href="/projects" className="text-blue-500 hover:underline">Projects</Link></li>
-        </ul>
-      </nav>
     </div>
   );
 }
