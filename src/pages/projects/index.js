@@ -2,26 +2,26 @@ import Link from 'next/link';
 
 const projects = [
   {
-    title: 'Project 1',
-    description: 'Description of project 1.',
-    link: 'https://github.com/yourusername/project1',
+    title: 'Robot Assembly Clicker',
+    description: 'A simple clicker game running on javascript. Craft computer chips to build robots that then automate the process.',
+    link: 'https://github.com/hunterfaugot/capstone-mod1',
   },
   {
-    title: 'Project 2',
-    description: 'Description of project 2.',
-    link: 'https://github.com/yourusername/project2',
+    title: 'Random B-Movie Generator',
+    description: 'A site that generates a random B-Movie each time you press the button. Use to help you find a movie to watch or just learn about a hidden gem.',
+    link: 'https://github.com/hunterfaugot/capstone-mod2',
   },
   {
-    title: 'Project 3',
-    description: 'Description of project 3.',
-    link: 'https://github.com/yourusername/project3',
+    title: 'Library Project',
+    description: 'This is a library program using node.js that allows you to borrow and return books.',
+    link: 'https://github.com/hunterfaugot/jun1-library',
   },
 ];
 
 export default function Projects() {
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white p-4">
-      <div className="text-center py-20">
+    <div className="flex-grow flex flex-col bg-white dark:bg-black text-gray-900 dark:text-white"> 
+      <div className="flex flex-col justify-center items-center py-20">
         <h1 className="text-5xl font-bold mb-4">My Projects</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((project, index) => (

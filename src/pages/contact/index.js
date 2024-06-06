@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Link from 'next/link';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -12,8 +11,11 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Basic validation
     if (formData.name && formData.email && formData.message) {
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+        setSuccessMessage('Please enter a valid email address.');
+        return;
+      }
       setSuccessMessage('Thank you for your message! We will get back to you soon.');
       setFormData({ name: '', email: '', message: '' });
     } else {
@@ -22,12 +24,12 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white p-4">
-      <div className="text-center py-20">
+    <div className="flex-grow flex flex-col bg-white dark:bg-black text-gray-900 dark:text-white">
+      <div className="flex flex-col justify-center items-center py-20">
         <h1 className="text-5xl font-bold mb-4">Contact Me</h1>
         <form onSubmit={handleSubmit} className="w-full max-w-lg mx-auto">
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
+            <label className="block text-gray-700 dark:text-white text-sm font-bold mb-2" htmlFor="name">
               Name
             </label>
             <input
@@ -36,10 +38,11 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-white leading-tight focus:outline-none focus:shadow-outline"
+              required
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+            <label className="block text-gray-700 dark:text-white text-sm font-bold mb-2" htmlFor="email">
               Email
             </label>
             <input
@@ -48,10 +51,11 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-white leading-tight focus:outline-none focus:shadow-outline"
+              required
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">
+            <label className="block text-gray-700 dark:text-white text-sm font-bold mb-2" htmlFor="message">
               Message
             </label>
             <textarea
@@ -60,6 +64,7 @@ export default function Contact() {
               onChange={handleChange}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-white leading-tight focus:outline-none focus:shadow-outline"
               rows="4"
+              required
             />
           </div>
           <div className="flex items-center justify-between">

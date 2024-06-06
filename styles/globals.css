@@ -5,8 +5,13 @@
 /* Custom global styles */
 body {
   @apply bg-white text-gray-900;
+  @apply transition-colors duration-300;
 }
 
 .dark body {
   @apply bg-black text-white;
+}
+
+header, footer {
+  @apply transition-colors duration-300;
 }

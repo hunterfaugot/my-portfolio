@@ -21,7 +21,7 @@ export default function Layout({ children }) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-blue-500 dark:bg-blue-700 text-white p-4 flex justify-between items-center">
+      <header className="bg-blue-500 dark:bg-red-700 text-white p-4 flex justify-between items-center">
         <nav className="container mx-auto flex justify-center space-x-6">
           <ul className="flex space-x-6">
             <li><Link href="/" className="hover:underline">Home</Link></li>
@@ -37,10 +37,10 @@ export default function Layout({ children }) {
           {darkMode ? 'Light Mode' : 'Dark Mode'}
         </button>
       </header>
-      <main className="flex-grow container mx-auto p-4">
+      <main className="flex-grow container mx-auto p-4 flex flex-col justify-center">
         {children}
       </main>
-      <footer className="bg-blue-500 dark:bg-blue-700 text-white p-4 text-center">
+      <footer className="bg-blue-500 dark:bg-red-700 text-white p-4 text-center">
         &copy; {new Date().getFullYear()} Your Name. All rights reserved.
       </footer>
     </div>
