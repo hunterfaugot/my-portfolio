@@ -1,7 +1,5 @@
 import '../../styles/globals.css';
-import Layout from '../components/layout';
-
-console.log('Layout Component Path:', require.resolve('../components/layout'));
+import Layout from '../components/layout';  // Use the correct case and path
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,3 +10,4 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
